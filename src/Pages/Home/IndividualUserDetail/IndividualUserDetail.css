@@ -25,14 +25,55 @@
     font-weight: 600;
     font-size: 150%;
     text-align: start;
-    color: rgb(245, 58, 24);
+    color: blue;
     font-weight: 700;
 }
 
 .name {
-    color: crimson;
+    color: blue;
     font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media only screen and (max-width:576px){
+    .steps {
+        font-size: 100%;
+        font-weight: 500;
+        text-align: start;
+    }
+    .text-style{
+        color:dodgerblue;
+        font-size: 80%;
+    }
+    .title-two{
+        color: blue;
+        font-weight: 600;
+        font-size: 100%;
+    }
+    .main-div{
+        text-align: start;
+    }
+    .others {
+        font-size: 100%;
+        font-weight: 400;
+        text-align: start;
+    }
+    
+    .title {
+        font-weight: 600;
+        font-size: 100%;
+        text-align: start;
+        color: blue;
+        font-weight: 700;
+    }
+    
+    .name {
+        color: blue;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 100%;
+    }
 }

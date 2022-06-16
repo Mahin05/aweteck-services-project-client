@@ -4,7 +4,7 @@
 }
 .recipes-title{
     text-align: center;
-    color: crimson;
+    color:darkblue;
     font-size: 300%;
     font-weight: 700;
 }
@@ -18,7 +18,7 @@
 }
 .title-style{
     font-weight: 800;
-    color: tomato;
+    color:blue;
 }
 
 /* Make recipes responsive */

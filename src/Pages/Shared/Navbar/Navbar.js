@@ -1,17 +1,20 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import './Navbar.css'
 const Navbar = () => {
-    // const [user, loading, error] = useAuthState(auth);
-    // const logout = () => {
-    //     signOut(auth);
-    // };
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     const menuItems = <>
-        <li className='list-stye'><Link to="/">HOME</Link></li>
-        <li className='list-stye'><Link to="/">RECIPE</Link></li>
-        {/* <li>{user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> :
-            <Link className='list-stye' to="/login">LOGIN</Link>}</li>
-        <li className='list-stye'>{user && <button className="btn btn-ghost">{user.email}</button>}</li> */}
+        <li className='list-stye font-bold'><Link to="/">HOME</Link></li>
+        {/* <li className='list-stye'><Link to="/">RECIPE</Link></li> */}
+        <li>{user ? <button onClick={logout} className="btn btn-ghost font-bold">Sign Out</button> :
+            <Link className='list-stye font-bold' to="/login">LOGIN</Link>}</li>
+        <li className='list-stye'>{user && <button className="btn btn-ghost text-success">{user.email}</button>}</li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -24,7 +27,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/'><a className="btn btn-ghost normal-case text-xl food-style">FOOD RECIPE</a></Link>
+                <Link to='#'><a className="btn btn-ghost normal-case text-xl food-style text-success">WELCOME</a></Link>
+                {user && <p className="text-primary text-uppercase">{user.displayName}</p>}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

@@ -14,7 +14,7 @@ const IndividualUserDetail = () => {
     return (
         <div class="card w-100 bg-base-100 shadow-xl mx-auto mt-1 main-div">
             <div class="card-body">
-                <h2 class="card-title text-4xl name">Name: {user.name}</h2>
+                <h2 class="card-title text-4xl name">Name: <span className='text-style'>{user.name}</span></h2>
                 <p className="steps"><span className='title'>Username: <span className='text-style'>{user.username}</span></span></p>
                 <p className="steps"><span className='title'>Email: <span className='text-style'>{user.email}</span></span></p>
                 <p className="steps"><span className='title'>Address:</span></p>
