@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import IndividualUserDetailModa from '../IndividualUserDetailModa/IndividualUserDetailModa';
 import UserDetail from '../UserDetail/UserDetail';
 import './UserDetails.css'
 
 const UserDetails = () => {
+    const [detail,setDetail] = useState(null);
     const [userDetails, setUserDetails] = useState([]);
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -20,11 +22,12 @@ const UserDetails = () => {
                     {
                         userDetails.map(userDetail => <UserDetail
                             key={userDetail._id}
+                            setDetail={setDetail}
                             userDetail={userDetail}
                         ></UserDetail>)
                     }
                     {
-
+                        detail && <IndividualUserDetailModa detail={detail}></IndividualUserDetailModa>
                     }
                 </div>
             </div>
