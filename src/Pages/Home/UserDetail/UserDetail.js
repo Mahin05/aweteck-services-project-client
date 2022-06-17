@@ -14,8 +14,7 @@ const UserDetail = ({userDetail,setDetail}) => {
                 <h2 class="card-title name-title">{username}</h2>
                 <h2 class="card-title email-title">{email}</h2>
                 <div class="card-actions">
-                <label onClick={()=>setDetail(userDetail)}  for="user-info-modal" class="btn btn-ghost mt-3 seemore">open modal</label> 
-                {/* <button for="my-modal-3" onClick={()=>setDetail(userDetail)}  class="btn btn-ghost mt-3 seemore">See more user details...</button> */}
+                <label onClick={()=>setDetail(userDetail)}  for="user-info-modal" class="btn btn-ghost mt-3 seemore">See more user details...</label> 
                 </div>
             </div>
         </div>
